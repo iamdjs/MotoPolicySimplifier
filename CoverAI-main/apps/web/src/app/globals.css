@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Anthropic Warm Theme */
+    --background: 38 33% 97%;          /* #FAF8F5 warm off-white/cream */
+    --foreground: 0 0% 10%;            /* #191919 near-black charcoal */
+    --card: 36 24% 93%;                /* #F1EDE4 soft warm beige */
+    --card-foreground: 0 0% 10%;
+    --popover: 38 33% 97%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 0 0% 10%;               /* #191919 solid charcoal */
+    --primary-foreground: 38 33% 97%;  /* #FAF8F5 cream */
+    --secondary: 36 20% 90%;           /* #EAE4D8 */
+    --secondary-foreground: 0 0% 12%;
+    --muted: 36 15% 92%;
+    --muted-foreground: 25 8% 44%;     /* #6E6862 warm gray */
+    --accent: 14 58% 55%;              /* #D2654A terracotta */
+    --accent-foreground: 38 33% 97%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 38 33% 97%;
+    --border: 36 16% 87%;              /* #E2DDD4 */
+    --input: 36 16% 87%;
+    --ring: 0 0% 10%;
+    --radius: 0.75rem;
+
+    /* Custom Color Tokens */
+    --anthropic-cream: #FAF8F5;
+    --anthropic-sand: #F3EFE6;
+    --anthropic-charcoal: #191919;
+    --anthropic-terracotta: #D2654A;
+    --anthropic-clay: #C0583E;
+    --anthropic-stone: #E5E0D6;
+    --anthropic-olive: #3D4438;
+  }
+
+  .dark {
+    --background: 0 0% 8%;             /* #141414 */
+    --foreground: 38 25% 94%;          /* #F5F2EC */
+    --card: 0 0% 12%;                  /* #1F1F1F */
+    --card-foreground: 38 25% 94%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 38 25% 94%;
+    --primary: 38 25% 94%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 38 25% 94%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 36 8% 60%;
+    --accent: 14 58% 55%;
+    --accent-foreground: 38 25% 94%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 38 25% 94%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 38 25% 94%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-[#191919] selection:text-[#FAF8F5];
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .font-serif-heading {
+    font-family: var(--font-serif), Georgia, Cambria, serif;
+    letter-spacing: -0.02em;
+  }
+  .font-sans-body {
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
